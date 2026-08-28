@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: CustomAdvisor-TokenConsumes
+
+  #    gemini model
+  ai:
+    google:
+      genai:
+        api-key: ${GEMINI_API_KEY}
+
+        chat:
+          model: gemini-3.6-flash
+          temperature: 0.7
+
+server:
+  port: 8081
+
+logging:
+  level:
+    org:
+      springframework:
+        ai:
+          chat:
+            client:
+              advisor: DEBUG
